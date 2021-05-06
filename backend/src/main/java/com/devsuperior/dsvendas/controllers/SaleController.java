@@ -18,25 +18,25 @@ import com.devsuperior.dsvendas.service.SaleService;
 @RestController
 @RequestMapping(value = "/sales")
 public class SaleController {
-
-	@Autowired
-	private SaleService service;
 	
+	@Autowired 
+	private SaleService service;
+
 	@GetMapping
-	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable){
+	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
 		Page<SaleDTO> list = service.findAll(pageable);
 		return ResponseEntity.ok(list);
 	}
 	
-	@GetMapping(value = "/amount-by-seller")
-	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller(){
-		List<SaleSumDTO> list = service.amountGroupedBySeller();
+	@GetMapping(value = "/sum-by-seller")
+	public ResponseEntity<List<SaleSumDTO>> amountGroupBySeller() {
+		List<SaleSumDTO> list = service.amountGroupBySeller();
 		return ResponseEntity.ok(list);
 	}
 	
 	@GetMapping(value = "/success-by-seller")
-	public ResponseEntity<List<SaleSuccessDTO>> successGroupedBySeller(){
-		List<SaleSuccessDTO> list = service.successGroupedBySeller();
+	public ResponseEntity<List<SaleSuccessDTO>> successGroupBySeller() {
+		List<SaleSuccessDTO> list = service.successGroupBySeller();
 		return ResponseEntity.ok(list);
 	}
 }
