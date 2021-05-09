@@ -12,6 +12,7 @@ public class SaleSumDTO implements Serializable {
 	private Double sum;
 	
 	public SaleSumDTO() {
+		
 	}
 
 	public SaleSumDTO(Seller seller, Double sum) {
