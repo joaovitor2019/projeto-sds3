@@ -2,22 +2,22 @@ package com.devsuperior.dsvendas.dto;
 
 import com.devsuperior.dsvendas.entities.Seller;
 
-public class nadaAver {
+public class SellerDTO {
 	  
 		
 		private Long id;
 		private String name;
 		
-		public nadaAver() {	
+		public SellerDTO() {	
 			
 		}
 
-		public nadaAver(Long id, String name) {
+		public SellerDTO(Long id, String name) {
 			this.id = id;
 			this.name = name;
 		}
 		
-		public nadaAver(Seller entity) {
+		public SellerDTO(Seller entity) {
 			id = entity.getId();
 			name = entity.getName();
 		}

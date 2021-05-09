@@ -12,12 +12,12 @@ public class SaleDTO {
 	private Double amount;
 	private LocalDate date;
 	
-	private nadaAver seller;
+	private SellerDTO seller;
 	
 	public SaleDTO() {	
 	}
 
-	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, nadaAver seller) {
+	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
@@ -32,7 +32,7 @@ public class SaleDTO {
 		deals = entity.getDeals();
 		amount = entity.getAmount();
 		date = entity.getDate();
-		seller = new nadaAver(entity.getSeller());
+		seller = new SellerDTO(entity.getSeller());
 	}
 
 	public Long getId() {
@@ -75,11 +75,11 @@ public class SaleDTO {
 		this.date = date;
 	}
 
-	public nadaAver getSeller() {
+	public SellerDTO getSeller() {
 		return seller;
 	}
 
-	public void setSeller(nadaAver seller) {
+	public void setSeller(SellerDTO seller) {
 		this.seller = seller;
 	}
 }

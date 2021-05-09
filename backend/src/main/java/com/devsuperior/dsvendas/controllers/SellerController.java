@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.dsvendas.dto.nadaAver;
+import com.devsuperior.dsvendas.dto.SellerDTO;
 import com.devsuperior.dsvendas.service.SellerService;
 
 @RestController
@@ -19,8 +19,8 @@ public class SellerController {
 	private SellerService service;
 
 	@GetMapping
-	public ResponseEntity<List<nadaAver>> findAll() {
-		List<nadaAver> list = service.findAll();
+	public ResponseEntity<List<SellerDTO>> findAll() {
+		List<SellerDTO> list = service.findAll();
 		return ResponseEntity.ok(list);
 	}
 }
